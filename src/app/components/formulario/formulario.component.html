@@ -2,28 +2,25 @@
   <table>
     <tr>
       <td>Texto:</td>
-      <td><input type="text" name="texto-input" id="texto-input" required/></td>
+      <td><input  [(ngModel)]="texto_input" name="texto_input" id="texto_input" required (change)="verifica()"/></td>
     </tr>
     <tr>
       <td>Numérica: </td>
-      <td><input type="number" name="numero-input" id="numero-input" required/></td>
+      <td><input [(ngModel)]="numerico_input" type="number" name="numerico_input" id="numerico_input"  required (change)="verifica()"/></td>
     </tr>
     <tr>
       <td>Comentario: </td>
-      <td><input type="text" name="comentario-input" id="comentario-input" /></td>
+      <td><input [(ngModel)]="comentario_input" type="text" name="comentario_input" id="comentario_input" /></td>
     </tr>
     <tr>
       <td>Selector:</td>
-      <td> <select id="selector-input" name="selector-input" required>
-              <option></option>
-              <option value="1">uno</option>
-              <option value="2">dos</option>
-              <option value="3">tres</option>
+      <td> <select [(ngModel)]="seleccionado_input" id="seleccionado_input" name="seleccionado_input" required (change)="verifica()">
+      <option [value]="seleccionado" *ngFor="let seleccionado of selector_input">{{seleccionado}}</option>
             </select> </td>
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <input type="submit" disabled/>
+        <input type="submit" [disabled]="botonDeshabilitado"/>
       </td>
     </tr>
   </table>
