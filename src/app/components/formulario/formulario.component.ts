@@ -11,14 +11,6 @@ export class FormularioComponent implements OnInit {
     this.texto_input = '';
   }
   public verifica() {
-  /*alert(
-      'verificando ' +
-        this.numerico_input +
-        '||' +
-        this.texto_input +
-        ' || ' +
-        this.seleccionado_input.length
-    );*/
     if (
       this.numerico_input != null &&
       this.texto_input != '' &&
