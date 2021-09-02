@@ -1,10 +1,30 @@
 <form>
-  <p>Texto:  <input type="text" name="texto-input" id="texto-input" required/> </p>
-  <p>Numérica:  <input type="number" name="numero-input" id="numero-input" required/> </p>
-  <p>Selector:  <select required>
-                    <option></option>
-                    <option value="1">uno</option>
-                    <option value="2">dos</option>
-                    <option value="3">tres</option>
-                </select> </p>
+  <table>
+    <tr>
+      <td>Texto:</td>
+      <td><input type="text" name="texto-input" id="texto-input" required/></td>
+    </tr>
+    <tr>
+      <td>Numérica: </td>
+      <td><input type="number" name="numero-input" id="numero-input" required/></td>
+    </tr>
+    <tr>
+      <td>Comentario: </td>
+      <td><input type="text" name="comentario-input" id="comentario-input" /></td>
+    </tr>
+    <tr>
+      <td>Selector:</td>
+      <td> <select id="selector-input" name="selector-input" required>
+              <option></option>
+              <option value="1">uno</option>
+              <option value="2">dos</option>
+              <option value="3">tres</option>
+            </select> </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="submit" disabled/>
+      </td>
+    </tr>
+  </table>
 </form>
