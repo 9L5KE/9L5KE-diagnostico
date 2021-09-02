@@ -15,6 +15,7 @@
     <tr>
       <td>Selector:</td>
       <td> <select [(ngModel)]="seleccionado_input" id="seleccionado_input" name="seleccionado_input" required (change)="verifica()">
+        <option value="" selected>Seleccione un valor</option>
       <option [value]="seleccionado" *ngFor="let seleccionado of selector_input">{{seleccionado}}</option>
             </select> </td>
     </tr>

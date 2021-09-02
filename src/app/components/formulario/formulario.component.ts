@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
   constructor() {
-    this.selector_input = ['', 'uno', 'dos', 'tres'];
+    this.selector_input = ['uno', 'dos', 'tres'];
     this.texto_input = '';
   }
   public verifica() {
@@ -17,15 +17,16 @@ export class FormularioComponent implements OnInit {
         '||' +
         this.texto_input +
         ' || ' +
-        this.seleccionado_input
+        this.seleccionado_input.length
     );*/
     if (
       this.numerico_input != null &&
       this.texto_input != '' &&
-      (this.seleccionado_input != undefined || this.seleccionado_input != '')
+      (this.seleccionado_input.length>0)
     )
       this.botonDeshabilitado = false;
-    else this.botonDeshabilitado = true;
+    else 
+      this.botonDeshabilitado = true;
   }
 
   ngOnInit(): void {}
